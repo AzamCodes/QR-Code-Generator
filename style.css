@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Belanosima:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #212121;
+}
+.container {
+  position: relative;
+  background-color: #000;
+
+  height: 245px;
+  padding: 2rem;
+  margin: 0px 16px;
+  border-radius: 1rem;
+  transition: height 0.3s ease;
+}
+.container.active {
+  height: 520px;
+}
+.qr-info h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(255, 153, 0, 1);
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+.qr-info h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: rgb(255, 153, 0, 0.7);
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form {
+  padding: 18px 0px;
+}
+.form input[type="text"] {
+  padding: 12px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  background-color: #212121;
+  border: 1.5px solid #000;
+  border-radius: 0.7rem;
+  color: rgb(255, 153, 0, 0.8);
+  outline: none;
+}
+.form input[type="text"]:focus {
+  color: rgb(255, 153, 0, 0.7);
+  border: 1px solid rgb(255, 153, 0, 0.5);
+}
+.form input[type="button"] {
+  padding: 12px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  text-transform: uppercase;
+  color: #111111;
+  background-color: rgb(255, 153, 0, 1);
+  border-radius: 0.8rem;
+  font-family: 800;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.form input[type="button"]:hover {
+  color: #000;
+  background-color: rgb(255, 153, 0, 0.7);
+}
+.qrImg {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  border-radius: 0.8rem;
+  pointer-events: none;
+  background-color: transparent;
+  padding: 2rem;
+
+  border: 1px solid rgb(255, 153, 0, 0.8);
+}
+
+.container.active .qrImg {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+@media (max-width: 500px) {
+  .qr-info h1 {
+    font-size: 1.4rem;
+  }
+  .qr-info h2 {
+    font-size: 0.8rem;
+  }
+}
